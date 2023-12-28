@@ -1,0 +1,107 @@
+@import url(reset.css);
+:root {
+	--index: calc(1vw + 1vh);
+}
+.header {
+	min-height: 100vh;
+	width: 100%;
+	background-image: url(../img/forest.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.main {
+	min-height: 100Vh;
+	width: 100%;
+	background-image: url(../img/podval.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.photo {
+	position: absolute;
+	bottom: calc(var(--index) *-10);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+.photo img {
+	width: 100%;
+}
+.title {
+	padding: 0 calc(var(--index) *1);
+	color: rgb(255, 255, 255);
+	text-align: center;
+	font-size: calc(var(--index) *4);
+	text-shadow:
+	0 0 7px #fff,
+	0 0 10px #fff,
+	0 0 42px #f2ff02,
+	0 0 82px #f2ff02,
+	0 0 92px #f2ff02;
+	z-index: 2;
+} 
+	
+.section1 {	
+	min-height: 100Vh;
+	width: 100%;
+	background-image: url(../img/podval.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 calc(var(--index) *2);
+	text-align: justify;
+	font-size: clamp(16px, calc(var(--index) *.7), 100px);
+}
+.description {
+	width: calc(var(--index) *40);
+	color: wheat;
+}
+.footer{
+	padding: calc(var(--index) *3) calc(var(--index) *2);
+	background-color: #141414;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: calc(var(--index) *1);
+	text-align: center;
+	color: wheat;
+}
+.foot-text {
+	font-size: calc(var(--index) *1.2);
+}
+.input {
+	text-align: center;
+	padding: calc(var(--index) *.4);
+	border: calc(var(--index) *.2) solid wheat;
+	border-radius: calc(var(--index) *1);
+	font-size: calc(var(--index) *1.2);
+}
+.btn-center {
+	margin-top: calc(var(--index) *.5);
+	background-color: #000000;
+	padding: calc(var(--index) *.4);
+	border: calc(var(--index) *.2) solid wheat;
+	border-radius: calc(var(--index) *1);
+	font-size: calc(var(--index) *1.2);
+}
+
+
+/* Adaptive */
+@media screen and (max-width: 550px) {
+	.photo {
+		display: block;
+	}
+	.description {
+		width: 100%;
+	}
+}
